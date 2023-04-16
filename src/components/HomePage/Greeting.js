@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import styles from "./HomePage.module.css";
+
+const styles = {};
 
 const Greeting = () => {
     return (
