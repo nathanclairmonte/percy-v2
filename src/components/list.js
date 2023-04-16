@@ -5,7 +5,3 @@ export { default as Hero } from "./Hero";
 export { default as LatestRepos } from "./LatestRepos";
 export { default as RepoCard } from "./RepoCard";
 export { default as CommitHistory } from "./CommitHistory";
-
-export { default as Greeting } from "./HomePage/Greeting";
-export { default as Introduction } from "./HomePage/Introduction";
-export { default as Particle } from "./HomePage/Particle";
