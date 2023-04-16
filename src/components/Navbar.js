@@ -33,16 +33,19 @@ const NavBar = () => {
                     </Link>
                 </div>
 
-                <div className="hidden md:flex md:flex-row md:gap-8">
+                <div className="hidden md:flex md:flex-row md:gap-4">
                     <Link href="/about" className={_navLinkStylesHelper("/about")}>
                         About
                     </Link>
+                    <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/projects" className={_navLinkStylesHelper("/projects")}>
                         Projects
                     </Link>
+                    <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/resume" className={_navLinkStylesHelper("/resume")}>
                         Resume
                     </Link>
+                    <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
                         Contact
                     </Link>
@@ -85,16 +88,19 @@ const NavBar = () => {
                     </button>
                 </div>
             </div>
-            <div className="mt-5 flex flex-row justify-center gap-8 md:hidden">
+            <div className="mt-5 flex flex-row justify-center gap-4 md:hidden">
                 <Link href="/about" className={_navLinkStylesHelper("/about")}>
                     About
                 </Link>
+                <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/projects" className={_navLinkStylesHelper("/projects")}>
                     Projects
                 </Link>
+                <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/resume" className={_navLinkStylesHelper("/resume")}>
                     Resume
                 </Link>
+                <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
                     Contact
                 </Link>
