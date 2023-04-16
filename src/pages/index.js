@@ -16,7 +16,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout title="Nathan Clairmonte" description="My personal website">
-                Temp
+                <div style={{ height: "75vh" }}>Temp</div>
             </MainLayout>
         </>
     );

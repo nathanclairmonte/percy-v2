@@ -18,23 +18,23 @@ const NavBar = () => {
     // function to select nav link styles based on router path
     const _navLinkStylesHelper = (route) => {
         if (router.asPath === route) {
-            return `${styles.nav_links_main_selected}`;
+            return "font-bold text-[#131517] hover:cursor-pointer hover:opacity-80 dark:text-gray-400";
         } else {
-            return `${styles.nav_links_main_normal}`;
+            return "font-normal text-[#888581] hover:cursor-pointer hover:opacity-80 dark:text-gray-300";
         }
     };
 
     return (
-        <div className={styles.main_container}>
-            <div className={styles.nav_container}>
-                <div className={styles.nav_logo_container}>
-                    <Link href="/">
+        <div className="mx-auto max-w-6xl bg-[#fffbf5] px-4 py-10 dark:bg-gray-800 md:py-20">
+            <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-col">
+                    <Link href="/" className="hover:cursor-pointer hover:opacity-80">
                         <h1>Nathan Clairmonte</h1>
                         {/* Would love to do something else cool here. Keep an eye out for something we could use */}
                     </Link>
                 </div>
 
-                <div className={styles.nav_links_main}>
+                <div className="hidden md:flex md:flex-row md:gap-8">
                     <Link href="/about" className={_navLinkStylesHelper("/about")}>
                         About
                     </Link>
@@ -49,32 +49,32 @@ const NavBar = () => {
                     </Link>
                 </div>
 
-                <div className={styles.nav_links_social}>
+                <div className="flex flex-row items-center gap-4">
                     <Link
                         href="https://www.linkedin.com/in/nathanclairmonte/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <BsLinkedin className={styles.nav_icon} />
+                        <BsLinkedin className="text-2xl font-normal text-[#f08057] hover:cursor-pointer hover:opacity-80" />
                     </Link>
                     <Link
                         href="https://github.com/nathanclairmonte"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <BsGithub className={styles.nav_icon} />
+                        <BsGithub className="text-2xl font-normal text-[#f08057] hover:cursor-pointer hover:opacity-80" />
                     </Link>
                     <Link
                         href="https://twitter.com/cIairmonte"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <BsTwitter className={styles.nav_icon} />
+                        <BsTwitter className="text-2xl font-normal text-[#f08057] hover:cursor-pointer hover:opacity-80" />
                     </Link>
                     <button
                         aria-label="Toggle Dark Mode"
                         type="button"
-                        className={styles.theme_button_container}
+                        className="h-10 w-10 p-3 focus:outline-none"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
                         {mounted &&
