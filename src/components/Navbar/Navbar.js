@@ -74,19 +74,19 @@ const NavBar = () => {
                     <button
                         aria-label="Toggle Dark Mode"
                         type="button"
-                        className="h-10 w-10 p-3 focus:outline-none"
+                        className="ml-2 h-10 w-10 p-3 focus:outline-none"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
                         {mounted &&
                             (theme === "dark" ? (
-                                <BsFillSunFill className={styles.theme_icon} />
+                                <BsFillSunFill className="h-4 w-4 text-[#EAB308]" />
                             ) : (
-                                <BsFillMoonFill className={styles.theme_icon} />
+                                <BsFillMoonFill className="h-4 w-4 text-[#F8C632]" />
                             ))}
                     </button>
                 </div>
             </div>
-            <div className={styles.nav_links_main_2}>
+            <div className="mt-5 flex flex-row justify-center gap-8 md:hidden">
                 <Link href="/about" className={_navLinkStylesHelper("/about")}>
                     About
                 </Link>
