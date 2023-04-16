@@ -4,8 +4,8 @@ import Typewriter from "typewriter-effect";
 const Hero = () => {
     return (
         <div className="mx-auto flex max-w-6xl flex-row justify-between px-8 py-10 md:py-20">
-            <div className="flex flex-col gap-8">
-                <div className="">
+            <div className="flex flex-grow flex-col items-center gap-8 md:items-start">
+                <div className="flex w-full flex-col items-center md:items-start">
                     <h1 className="text-5xl text-slate-800 dark:text-slate-200">
                         Hey! My name is{" "}
                     </h1>
