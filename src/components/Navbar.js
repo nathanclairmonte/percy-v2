@@ -17,7 +17,7 @@ const NavBar = () => {
     // function to select nav link styles based on router path
     const _navLinkStylesHelper = (route) => {
         if (router.asPath === route) {
-            return "font-bold text-[#131517] hover:cursor-pointer hover:opacity-80 dark:text-gray-400";
+            return "font-semibold text-[#EE6F41] hover:cursor-pointer hover:opacity-80 dark:text-[#f08057]";
         } else {
             return "font-normal text-[#888581] hover:cursor-pointer hover:opacity-80 dark:text-gray-300";
         }
