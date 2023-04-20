@@ -5,3 +5,5 @@ export { default as Hero } from "./Hero";
 export { default as LatestRepos } from "./LatestRepos";
 export { default as RepoCard } from "./RepoCard";
 export { default as CommitHistory } from "./CommitHistory";
+export { default as AboutMeBlurb } from "./AboutMeBlurb";
+export { default as TechStack } from "./TechStack";
