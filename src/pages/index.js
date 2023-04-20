@@ -28,7 +28,6 @@ export default function Home({ repos }) {
 }
 
 export const getStaticProps = async () => {
-    console.log("starting");
     const repos = await getLatestRepos(myInfo, 10);
 
     return {
