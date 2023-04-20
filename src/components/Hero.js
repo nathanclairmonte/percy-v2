@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
+import { BsArrow90DegUp } from "react-icons/bs";
 
 const Hero = () => {
     return (
@@ -38,6 +39,12 @@ const Hero = () => {
                 Then a little message underneath talking about it lol. Idk. Gonna ask
                 ChatGPT right now actually. */}
                 <Image src="/sunset.jpeg" width={512} height={512} />
+                <div className="mr-0 mt-3 flex flex-row gap-2">
+                    <BsArrow90DegUp />
+                    <p className="font-mono text-sm">
+                        My current favourite image. Created with Stable Diffusion!
+                    </p>
+                </div>
                 {/* svg */}
                 {/* potential little message underneath */}
             </div>
