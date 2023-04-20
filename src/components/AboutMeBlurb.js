@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BsArrow90DegUp } from "react-icons/bs";
 
 const AboutMeBlurb = () => {
     return (
@@ -35,6 +36,10 @@ const AboutMeBlurb = () => {
             </div>
             <div className="relative -mr-32 -mt-20 hidden w-full md:block md:w-1/2">
                 <Image src="/me.jpeg" width={512} height={512} className="drop-shadow-lg" />
+                <div className="mr-0 mt-3 flex flex-row gap-2">
+                    <BsArrow90DegUp />
+                    <p className="font-mono text-sm">That's me!</p>
+                </div>
             </div>
         </div>
     );
