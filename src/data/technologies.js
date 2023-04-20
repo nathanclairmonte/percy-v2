@@ -20,6 +20,7 @@ import {
     SiDotnet,
     SiGooglecloud,
     SiCsharp,
+    SiTailwindcss,
 } from "react-icons/si";
 
 export const technologies = [
@@ -72,12 +73,12 @@ export const technologies = [
         icon: <SiTypescript className="text-6xl text-gray-700 dark:text-gray-100" />,
     },
     {
-        name: "React",
+        name: "React/React-Native",
         icon: <FaReact className="text-6xl text-gray-700 dark:text-gray-100" />,
     },
     {
-        name: "React-Native",
-        icon: <FaReact className="text-6xl text-gray-700 dark:text-gray-100" />,
+        name: "TailwindCSS",
+        icon: <SiTailwindcss className="text-6xl text-gray-700 dark:text-gray-100" />,
     },
     {
         name: "PostgreSQL",
