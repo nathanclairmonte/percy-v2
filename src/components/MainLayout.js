@@ -36,7 +36,7 @@ const MainLayout = ({ children, ...customMeta }) => {
                 <meta name="twitter:image" content={meta.image} />
                 {meta.date && <meta property="article:published_time" content={meta.date} />}
             </Head>
-            <main className="dark:bg-gray-800 w-full">
+            <main className="w-full bg-[#fffbf5] dark:bg-gray-800">
                 <Navbar />
                 <div>{children}</div>
                 <Footer />
