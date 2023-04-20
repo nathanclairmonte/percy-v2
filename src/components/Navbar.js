@@ -28,12 +28,18 @@ const NavBar = () => {
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                     <Link href="/" className="hover:cursor-pointer hover:opacity-80">
-                        <h1>Nathan Clairmonte</h1>
+                        <h1 className="-mt-5 rounded bg-black p-2 text-4xl font-semibold text-[#f08057]">
+                            Nc.
+                        </h1>
                         {/* Would love to do something else cool here. Keep an eye out for something we could use */}
                     </Link>
                 </div>
 
                 <div className="hidden md:flex md:flex-row md:gap-4">
+                    <Link href="/" className={_navLinkStylesHelper("/")}>
+                        Home
+                    </Link>
+                    <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/about" className={_navLinkStylesHelper("/about")}>
                         About
                     </Link>
@@ -89,6 +95,10 @@ const NavBar = () => {
                 </div>
             </div>
             <div className="mt-5 flex flex-row justify-center gap-4 md:hidden">
+                <Link href="/" className={_navLinkStylesHelper("/")}>
+                    Home
+                </Link>
+                <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/about" className={_navLinkStylesHelper("/about")}>
                     About
                 </Link>
