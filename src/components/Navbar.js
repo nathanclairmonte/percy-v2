@@ -28,7 +28,7 @@ const NavBar = () => {
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                     <Link href="/" className="hover:cursor-pointer hover:opacity-80">
-                        <h1 className="-mt-5 rounded bg-black p-2 text-4xl font-semibold text-[#f08057]">
+                        <h1 className="-mt-5 rounded bg-black p-2 text-4xl font-semibold text-[#f08057] drop-shadow-lg">
                             Nc.
                         </h1>
                         {/* Would love to do something else cool here. Keep an eye out for something we could use */}
@@ -84,6 +84,7 @@ const NavBar = () => {
                         type="button"
                         className="ml-2 h-10 w-10 p-3 focus:outline-none"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                        title="Toggle Dark Mode"
                     >
                         {mounted &&
                             (theme === "dark" ? (
