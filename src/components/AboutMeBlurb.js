@@ -38,7 +38,7 @@ const AboutMeBlurb = () => {
                 <Image src="/me.jpeg" width={512} height={512} className="drop-shadow-lg" />
                 <div className="mr-0 mt-3 flex flex-row gap-2">
                     <BsArrow90DegUp />
-                    <p className="font-mono text-sm">That's me!</p>
+                    <p className="mt-1 font-mono text-sm">That's me!</p>
                 </div>
             </div>
         </div>
