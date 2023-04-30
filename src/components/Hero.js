@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import { BsArrow90DegUp } from "react-icons/bs";
 
@@ -39,11 +40,21 @@ const Hero = () => {
                 Then a little message underneath talking about it lol. Idk. Gonna ask
                 ChatGPT right now actually. */}
                 <Image src="/sunset.jpeg" width={512} height={512} />
-                <div className="mr-0 mt-3 flex flex-row gap-2">
+                <div className="mt-3 flex flex-row gap-2 pr-2">
                     <BsArrow90DegUp />
-                    <p className="font-mono text-sm">
-                        My current favourite image. Created with Stable Diffusion!
-                    </p>
+                    <div className="mt-1 flex flex-row gap-2 font-mono text-sm">
+                        A cool AI-generated image created with{" "}
+                        <div className="group transition duration-300 hover:cursor-pointer">
+                            <Link
+                                href="/"
+                                className="font-semibold text-[#EE6F41] dark:text-[#f08057]"
+                            >
+                                code I wrote!
+                            </Link>
+                            <span class="block h-0.5 max-w-0 bg-[#EE6F41] transition-all duration-500 group-hover:max-w-full dark:bg-[#f08057]"></span>
+                        </div>
+                        {/* put a link around the 'code I wrote' part, to the github for it */}
+                    </div>
                 </div>
                 {/* svg */}
                 {/* potential little message underneath */}
