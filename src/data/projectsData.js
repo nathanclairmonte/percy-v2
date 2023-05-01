@@ -51,7 +51,11 @@ export const projectsData = [
     {
         img: "/projects/tf.jpg",
         title: "Transcription Factor Binding Site Prediction",
-        desc: `A project examining whether DNA structural/physical properties are sufficient for a machine learning model to predict transcription factor binding sites. Dataset was extracted from human genome data using Biopython and ML models were implemented using Keras.`,
+        desc: `A project examining whether DNA structural/physical properties were sufficient for a machine learning model to predict transcription factor binding sites. Demonstrated that DNA physical properties can be used to predict transcription factor binding sites with around 70% accuracy.
+        
+        Dataset was extracted from human genome data by contrasting known binding sites with the position weight matrices (PWM) for various transcription factors.
+        
+        Data wrangling, cleaning and extraction done using NumPy and Biopython. ML models were implemented using TensorFlow and Keras.`,
         gitLink: "https://github.com/nathanclairmonte/transcription-factor-binding-site-prediction",
         webLink: null,
         technologies: [
@@ -65,41 +69,33 @@ export const projectsData = [
         ],
     },
     {
-        img: "/projects/melody-generation.png",
-        title: "Recurrent Neural Networks for Melody Generation",
-        desc: `A project using RNNs made of LSTM units to generate melodies. Two melody generation systems were implemented which learn on a set of training melodies to generate novel melodies of their own. Gen-pitch learns solely on note pitch, Gen-duration learns on both note pitch and duration. Melodies are in MIDI format. Models were implemented using Keras.`,
-        gitLink: "https://github.com/nathanclairmonte/melody-generation-RNN",
-        webLink: null,
-        technologies: ["Python", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "Music21"],
-    },
-    {
-        img: "/projects/pacman.png",
-        title: "PacMan Q-Learning Agent (Reinforcement Learning)",
-        desc: `A project implementing Q-learning reinforcement learning techniques to create an AI to play PacMan. Implemented using C++, Python and the Arcade Learning Environment (ALE) package. All code for the agent is inside the agent.py file.`,
-        gitLink: "https://github.com/nathanclairmonte/pacman-RL",
-        webLink: null,
-        technologies: ["Python", "C++", "Arcade Learning Environment", "Q-Learning"],
-    },
-    {
         img: "/projects/suicide-ideation.png",
         title: "Reducing Type II Errors in Suicide Ideation Detection",
-        desc: `A project investigating the classification of online text based on the presence of suicide ideation, specifically in the context of reducing the occurrence of more detrimental Type II errors. Models were implemented using Scikit-Learn.`,
+        desc: `A project investigating the classification of online text based on the presence of suicide ideation, specifically in the context of reducing the occurrence of more detrimental Type II (i.e. False Negative) errors. Demonstrated that Type II errors can be minimized without significant decrease to overall accuracy by altering an SVM classifier.
+        
+        The alterations made to the classifier consisted of reducing the prediction threshold and manually altering class weights before training. These two methods reduced Type II errors by 19.9% and 33.6%, respectively.
+        
+        For this project I desgigned data pipelines to process 200,000+ Reddit comments (i.e. stemming, lemmatization, stop-word removal etc.) and create TF-IDF features, using Python's NumPy, Scikit-Learn and NLTK packages. Models were implemented using Scikit-Learn.`,
         gitLink: "https://github.com/nathanclairmonte/suicide-ideation-detection",
         webLink: null,
         technologies: ["Python", "NumPy", "Pandas", "Scikit-Learn", "TensorFlow", "Keras", "NLTK"],
     },
     {
-        img: "/projects/titanic.jpg",
-        title: "Titanic Survival Classifier Package",
-        desc: `A simple classifier package built to explore ML model packaging with Python. Model was trained on the titanic survival dataset. Package utilises Pydantic for input validation, PyTest for unit testing and Tox for virtual environment management. Trained and packaged classifier was deployed on Railway.app, exposing an endpoint to make predictions. (NB: Deployment was subsequently removed as I ran out of Railway credits.)`,
-        gitLink: "https://github.com/nathanclairmonte/titanic-clf-package",
+        img: "/projects/melody-generation.png",
+        title: "Recurrent Neural Networks for Melody Generation",
+        desc: `A project using RNNs made of LSTM units to generate novel melodies.
+        
+        Two melody generation systems were implemented which learn on a set of training melodies to generate novel melodies of their own. Gen-pitch learns solely on note pitch, Gen-duration learns on both note pitch and duration. Melodies are in MIDI format. Models were implemented using Keras.`,
+        gitLink: "https://github.com/nathanclairmonte/melody-generation-RNN",
         webLink: null,
-        technologies: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Pydantic", "PyTest", "Tox"],
+        technologies: ["Python", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "Music21"],
     },
     {
         img: "/projects/natdle.png",
         title: 'Wordle Clone "Natdle"',
-        desc: `A wordle clone application built using React-Native and Typescript.`,
+        desc: `Created a mobile application containing a clone of the popular word game "Wordle". Extends on the original game by facilitating user signup and (soon-to-be) multiplayer functionality. Also includes a settings page where users can change game difficulty and toggle sounds/haptics throughout the app.
+        
+        App was built using React-Native and Expo with TypeScript. AWS Cognito facilitates user authentication, and AWS Lambda functions will be used to facilitate multiplayer game management and push notifications. All logic for the Wordle game itself was built from scratch using TypeScript. Codebase also utilises Prettier and ESLint for formatting consistency, and Husky pre-commit hooks to typecheck upon commit.`,
         gitLink: "https://github.com/nathanclairmonte/natdle",
         webLink: null,
         technologies: [
@@ -114,6 +110,22 @@ export const projectsData = [
             "ESLint",
             "Husky",
         ],
+    },
+    {
+        img: "/projects/titanic.jpg",
+        title: "Titanic Survival Classifier Package",
+        desc: `A simple classifier package built to explore ML model packaging with Python. Model was trained on the titanic survival dataset. Package utilises Pydantic for input validation, PyTest for unit testing and Tox for virtual environment management. Trained and packaged classifier was deployed on Railway.app, exposing an endpoint to make predictions. (NB: Deployment was subsequently removed as I ran out of Railway credits.)`,
+        gitLink: "https://github.com/nathanclairmonte/titanic-clf-package",
+        webLink: null,
+        technologies: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Pydantic", "PyTest", "Tox"],
+    },
+    {
+        img: "/projects/pacman.png",
+        title: "PacMan Q-Learning Agent (Reinforcement Learning)",
+        desc: `A project implementing Q-learning reinforcement learning techniques to create an AI to play PacMan. Implemented using C++, Python and the Arcade Learning Environment (ALE) package. All code for the agent is inside the agent.py file.`,
+        gitLink: "https://github.com/nathanclairmonte/pacman-RL",
+        webLink: null,
+        technologies: ["Python", "C++", "Arcade Learning Environment", "Q-Learning"],
     },
     {
         img: "/projects/udp-chat-system.png",
