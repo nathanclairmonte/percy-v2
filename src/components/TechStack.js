@@ -3,7 +3,7 @@ import { technologies } from "@/data/technologies";
 const TechStack = () => {
     return (
         <div className="mx-auto max-w-6xl">
-            <h1 className="mx-10  mb-10 mt-20 max-w-lg text-center text-5xl font-bold text-gray-500 dark:text-gray-600 sm:text-left  sm:text-6xl md:text-7xl lg:text-9xl">
+            <h1 className="mx-10  mb-10 mt-20 max-w-lg text-center text-5xl font-bold text-gray-500 dark:text-gray-600 sm:text-left  sm:text-6xl md:text-7xl lg:text-8xl">
                 Professional Skillset
             </h1>
             <div className="grid grid-cols-2 gap-8 px-10 sm:grid-cols-3 md:grid-cols-4 lg:mt-20 lg:grid-cols-5">
