@@ -47,10 +47,10 @@ const NavBar = () => {
                     <Link href="/projects" className={_navLinkStylesHelper("/projects")}>
                         Projects
                     </Link>
-                    <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
+                    {/* <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/resume" className={_navLinkStylesHelper("/resume")}>
                         Resume
-                    </Link>
+                    </Link> */}
                     <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                     <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
                         Contact
@@ -107,10 +107,10 @@ const NavBar = () => {
                 <Link href="/projects" className={_navLinkStylesHelper("/projects")}>
                     Projects
                 </Link>
-                <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
+                {/* <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/resume" className={_navLinkStylesHelper("/resume")}>
                     Resume
-                </Link>
+                </Link> */}
                 <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
                 <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
                     Contact
