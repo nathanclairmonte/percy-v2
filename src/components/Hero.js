@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="mx-auto flex max-w-6xl flex-row justify-between px-8 py-10 md:py-20">
             <div className="flex flex-grow flex-col items-center gap-8 md:items-start">
                 <div className="flex w-full flex-col items-center md:items-start">
-                    <h1 className="text-5xl text-slate-800 dark:text-slate-200">
+                    <h1 className="text-3xl text-slate-800 dark:text-slate-200 sm:text-5xl">
                         Hey! My name is{" "}
                     </h1>
-                    <div className="inline-block rounded-md py-3 text-5xl duration-300 hover:translate-x-2 hover:-rotate-3 hover:scale-110 hover:bg-[#f08057] hover:px-4 hover:text-black  dark:text-slate-200 dark:hover:text-black">
+                    <div className="inline-block rounded-md py-3 text-3xl duration-300 hover:translate-x-2 hover:-rotate-3 hover:scale-110 hover:bg-[#f08057] hover:px-4 hover:text-black dark:text-slate-200  dark:hover:text-black sm:text-5xl">
                         Nathan Clairmonte
                     </div>
                 </div>
@@ -27,8 +27,9 @@ const Hero = () => {
                             autoStart: true,
                             loop: true,
                             deleteSpeed: 50,
-                            wrapperClassName: "text-5xl text-[#f08057]",
-                            cursorClassName: "text-5xl text-gray-300 dark:text-gray-500",
+                            wrapperClassName: "text-3xl sm:text-5xl text-[#f08057]",
+                            cursorClassName:
+                                "text-3xl sm:text-5xl text-gray-300 dark:text-gray-500",
                         }}
                     />
                 </div>
