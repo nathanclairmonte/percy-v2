@@ -7,7 +7,7 @@ const AboutMeBlurb = () => {
             <div className="mb-10 md:hidden">
                 <Image src="/me.jpeg" width={128} height={128} className="rounded-full" />
             </div>
-            <div className="w-full text-lg md:w-1/2">
+            <div className="w-full text-lg text-gray-800 dark:text-gray-300 md:w-1/2">
                 Hello! My name is{" "}
                 <div className="inline-block rounded-md py-1 duration-300 hover:translate-x-2 hover:-rotate-3 hover:scale-110 hover:bg-[#f08057] hover:px-2  hover:text-black">
                     Nathan
