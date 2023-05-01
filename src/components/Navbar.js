@@ -52,8 +52,8 @@ const NavBar = () => {
                         Resume
                     </Link> */}
                     <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
-                    <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
-                        Contact
+                    <Link href="/experience" className={_navLinkStylesHelper("/experience")}>
+                        Experience
                     </Link>
                 </div>
 
@@ -112,8 +112,8 @@ const NavBar = () => {
                     Resume
                 </Link> */}
                 <div className="w-px bg-[#F6AD92] dark:bg-[#F2916E]" />
-                <Link href="/contact" className={_navLinkStylesHelper("/contact")}>
-                    Contact
+                <Link href="/experience" className={_navLinkStylesHelper("/experience")}>
+                    Experience
                 </Link>
             </div>
         </div>
