@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-20">
             <div className="h-0.5 w-full bg-[#f08057]"></div>
-            <div className="mt-8 flex flex-col items-center gap-4 md:flex-row md:justify-between">
+            <div className="mt-8 flex flex-col items-center gap-1 text-[#888581] dark:text-gray-300 md:flex-row md:justify-between">
                 <p>&copy; {year} Nathan Clairmonte. All Rights Reserved.</p>
 
                 <div>
@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-4">
+                <div className="mt-4 flex flex-row gap-4 md:mt-0">
                     <Link
                         href="https://www.linkedin.com/in/nathanclairmonte/"
                         target="_blank"
