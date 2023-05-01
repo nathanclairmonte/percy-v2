@@ -4,7 +4,7 @@ export const projectsData = [
         title: "PDF ChatBot",
         desc: `A project which uses the power of LLMs and semantic search to allow users to upload and "chat" with any local PDF they want. Simply sign in, get your account approved, and then upload whichever PDF you want to chat with! This project extends on my Arxiv ChatBot project by allowing users to upload their own local PDF files to chat with. This functionality is facilitated using Amazon S3 buckets.
       
-        To be able to upload local PDFs, users must first sign in and have their account approved. At a base-level this was just to keep usage at a reasonable level and protect my Amazon credits, but it also allowed me to play around with various authentication methods for Next.js applications. However, I've included functionality to chat with pre-existing sample PDFs for users who just want to test out the functionality of the app without signing in.
+        To be able to upload local PDFs, users must first sign in and have their account approved. At a base-level this was just to keep usage at a reasonable level and protect my Amazon credits, but it also allowed me to play around with various authentication methods for Next.js applications. Regardless, I've included functionality to chat with pre-existing sample PDFs for users who just want to test out the functionality of the app without signing in (an OpenAI API key is still required though).
         
         This application is powered by Next.js and therefore uses React on the frontend. On the backend, LangChain JS, Next.js API routes and Amazon S3 buckets are used to handle document loading and question answering over a document. To handle user authentication, NextAuth.js is used with a MongoDB database.
         `,
@@ -44,7 +44,6 @@ export const projectsData = [
             "JavaScript",
             "Next.js",
             "React",
-            "TailwindCSS",
             "Prettier",
             "Vercel",
         ],
