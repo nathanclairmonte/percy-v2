@@ -7,3 +7,6 @@ export { default as RepoCard } from "./RepoCard";
 export { default as CommitHistory } from "./CommitHistory";
 export { default as AboutMeBlurb } from "./AboutMeBlurb";
 export { default as TechStack } from "./TechStack";
+export { default as ProjectsList } from "./ProjectsList";
+export { default as ProjectCard } from "./ProjectCard";
+export { default as PageTitle } from "./PageTitle";
