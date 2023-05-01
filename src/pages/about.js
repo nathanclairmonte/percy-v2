@@ -1,8 +1,9 @@
-import { MainLayout, AboutMeBlurb, TechStack } from "@/components/list";
+import { MainLayout, PageTitle, AboutMeBlurb, TechStack } from "@/components/list";
 
 const about = () => {
     return (
-        <MainLayout>
+        <MainLayout title="About Me">
+            <PageTitle title="about" />
             <AboutMeBlurb />
             <TechStack />
         </MainLayout>
