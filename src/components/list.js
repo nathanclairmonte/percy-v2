@@ -10,3 +10,5 @@ export { default as TechStack } from "./TechStack";
 export { default as ProjectsList } from "./ProjectsList";
 export { default as ProjectCard } from "./ProjectCard";
 export { default as PageTitle } from "./PageTitle";
+export { default as ExperienceList } from "./ExperienceList";
+export { default as ExperienceCard } from "./ExperienceCard";
