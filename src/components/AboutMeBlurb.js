@@ -3,11 +3,12 @@ import { BsArrow90DegUp } from "react-icons/bs";
 
 const AboutMeBlurb = () => {
     return (
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-8 py-10 md:flex-row md:py-20">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-5 py-10 sm:px-8 md:flex-row md:py-20">
             <div className="mb-10 md:hidden">
                 <Image src="/me.jpeg" width={128} height={128} className="rounded-full" />
             </div>
-            <div className="w-full text-lg text-gray-800 dark:text-gray-300 md:w-1/2">
+            {/* <div className="w-full text-lg text-gray-800 dark:text-gray-300 md:w-1/2"> */}
+            <div className="w-full text-lg text-gray-500 dark:text-zinc-400 md:w-1/2">
                 Hello! My name is{" "}
                 <div className="inline-block rounded-md py-1 duration-300 hover:translate-x-2 hover:-rotate-3 hover:scale-110 hover:bg-[#f08057] hover:px-2  hover:text-black">
                     Nathan

@@ -19,7 +19,7 @@ const ExperienceCard = ({ experience }) => {
                 <h1>{experience.title}</h1>
 
                 {/* duration */}
-                <h1 className="flex-shrink-0 text-xl">
+                <h1 className="flex-shrink-0 text-lg md:text-xl">
                     {experience.duration.start} <span className="text-[#f08057]">—</span>{" "}
                     {experience.duration.end}
                 </h1>
