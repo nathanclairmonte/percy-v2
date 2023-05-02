@@ -22,7 +22,7 @@ const CommitHistory = () => {
                     View GitHub
                 </Link>
             </div>
-            <div className="px-10 lg:mt-20">
+            <div className="px-4 sm:px-10 lg:mt-20">
                 <GitHubCalendar
                     username="nathanclairmonte"
                     year={year}

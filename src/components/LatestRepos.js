@@ -19,7 +19,7 @@ const LatestRepos = ({ repos }) => {
                     View GitHub
                 </Link>
             </div>
-            <div className="grid grid-cols-1 gap-8 px-10 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:px-10 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
                 {repos && repos.map((repo, idx) => <RepoCard repo={repo} key={idx} />)}
             </div>
         </div>
