@@ -24,7 +24,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 py-10 selection:bg-cyan-300 selection:text-cyan-900 md:py-20">
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                     <Link href="/" className="hover:cursor-pointer hover:opacity-80">

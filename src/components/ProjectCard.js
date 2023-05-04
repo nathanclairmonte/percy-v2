@@ -6,7 +6,7 @@ const techs = ["Next.js", "TailwindCSS", "LangChain", "JavaScript"];
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="flex flex-col gap-6 rounded-xl border-0 border-gray-400 px-6 py-7 dark:border-gray-500">
+        <div className="flex flex-col gap-6 rounded-xl border-0 border-gray-400 px-6 py-7 selection:bg-cyan-300 selection:text-cyan-900 dark:border-gray-500">
             {/* project image */}
             <Image
                 src={project.img ? project.img : "/projects/placeholder.png"}

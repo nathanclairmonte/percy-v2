@@ -6,7 +6,7 @@ const Footer = () => {
     let year = date.getFullYear();
 
     return (
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 py-10 selection:bg-cyan-300 selection:text-cyan-900 md:py-20">
             <div className="h-0.5 w-full bg-[#f08057]"></div>
             <div className="mt-8 flex flex-col items-center gap-1 text-[#888581] dark:text-gray-300 md:flex-row md:justify-between">
                 <p>&copy; {year} Nathan Clairmonte. All Rights Reserved.</p>

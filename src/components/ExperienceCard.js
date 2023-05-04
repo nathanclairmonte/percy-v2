@@ -11,7 +11,7 @@ const location = "Montréal, Quebec/Toronto, Ontario (Remote)";
 
 const ExperienceCard = ({ experience }) => {
     return (
-        <div className="flex flex-col gap-1 rounded-xl border-0 border-gray-400 px-6 py-7 dark:border-gray-500">
+        <div className="flex flex-col gap-1 rounded-xl border-0 border-gray-400 px-6 py-7 selection:bg-cyan-300 selection:text-cyan-900 dark:border-gray-500">
             {/* first line (title & duration) */}
             <div className="mt-1 flex flex-col items-start justify-between gap-2 text-2xl font-bold text-gray-700 dark:text-gray-100 md:flex-row">
                 {/* title */}

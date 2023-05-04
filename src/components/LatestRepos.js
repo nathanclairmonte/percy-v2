@@ -4,7 +4,7 @@ import { RepoCard } from "@/components/list";
 
 const LatestRepos = ({ repos }) => {
     return (
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl selection:bg-cyan-300 selection:text-cyan-900">
             <div className="mx-10 mb-20 flex flex-col items-center justify-between md:mb-10 md:flex-row md:pt-40">
                 <h1 className="mb-10 mt-20 max-w-lg text-center text-6xl font-bold text-gray-500 dark:text-gray-600 md:my-0 md:text-left md:text-7xl lg:text-8xl">
                     Recent Repositories
