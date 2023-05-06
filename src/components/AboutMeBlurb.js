@@ -21,7 +21,7 @@ const AboutMeBlurb = () => {
                 track record of success. My expertise in the field of machine learning and
                 biomedical signal processing is highlighted by my numerous published academic
                 studies, demonstrating my dedication to advancing the field and sharing my knowledge
-                with others
+                with others.
                 <br />
                 <br />
                 In addition to my work in machine learing and AI, I have also honed my skills as a
