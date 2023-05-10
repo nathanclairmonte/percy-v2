@@ -6,7 +6,7 @@ export const projectsData = [
       
         To be able to upload local PDFs, users must first sign in and have their account approved. At a base-level this was just to keep usage at a reasonable level and protect my Amazon credits, but it also allowed me to play around with various authentication methods for Next.js applications. Regardless, I've included functionality to chat with pre-existing sample PDFs for users who just want to test out the functionality of the app without signing in (an OpenAI API key is still required though).
         
-        This application is powered by Next.js and therefore uses React on the frontend. On the backend, LangChain JS, Next.js API routes and Amazon S3 buckets are used to handle document loading and question answering over a document. To handle user authentication, NextAuth.js is used with a MongoDB database.
+        This application is powered by Next.js, and therefore uses React on the frontend. On the backend, LangChain JS, Next.js API routes and Amazon S3 buckets are used to handle document loading and question answering over a document. To handle user authentication, NextAuth.js is used with a MongoDB database.
         `,
         gitLink: "https://github.com/nathanclairmonte/pdf-chatbot",
         webLink: "https://www.pdfchatbot.app/",
@@ -29,11 +29,40 @@ export const projectsData = [
         ],
     },
     {
+        img: "/projects/codebreaker3-dark.png",
+        imgDark: "/projects/codebreaker3.png",
+        title: "C0deBreaker",
+        desc: `A number guessing game! At the start of a new game, a random 4-digit code is generated which the user must guess within 10 tries. On each guess, they will be given information about how many correct numbers there are in their guess and how many of those correct numbers are in the correct position.
+
+        I originally built this game just for myself, using only frontend code. However, some friends expressed interest in playing and I wanted to be able to track everyone game statistics, both of which lead to me expanding the game into a full-stack application which allows user sign-in and user-specific game statistics tracking (including number of games played, win percentage, current streak, best streak, and the guess distribution of the user’s wins). The game now has over 20 signed-up users and around 50 daily active players!
+        
+        This application is powered by Next.js, and therefore uses React on the frontend. On the backend, a PostgreSQL database is utilised (hosted on Supabase) which holds information on each user and each game played. To interface with this database, Prisma ORM is used. Game statistics tracking and streak calculations are implemented using Next.js API routes. To handle user authentication, NextAuth.js is used with the same PostgreSQL database.
+        `,
+        gitLink: null,
+        webLink: "https://www.c0debreaker.app/",
+        technologies: [
+            "JavaScript",
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "PostgreSQL",
+            "Supabase",
+            "Prisma ORM",
+            "NextAuth.js",
+            "Google OAuth API",
+            "Prettier",
+            "Vercel",
+        ],
+    },
+    {
         img: "/projects/arxivbot.png",
         title: "ArXiv ChatBot",
         desc: `A project which uses the power of LLMs and semantic search to allow users to "chat" with scientific papers hosted on popular scholarly article archive: arxiv.org. Simply input the ID of the paper you want to chat about, enter your OpenAI API key, and start asking questions!
     
-        Frontend of the application was built with Next.js. Document loading, splitting, storage, semantic search and question answering functionality was implemented with LangChain, HSNWLib and the OpenAI API.`,
+        Frontend of the application was built with Next.js. Document loading, splitting, storage, semantic search and question answering functionality was implemented with LangChain, HSNWLib and the OpenAI API.
+        
+        (This application was the pre-cursor for my PDF ChatBot application above).
+        `,
         gitLink: "https://github.com/nathanclairmonte/arxiv-bot-ui",
         webLink: "https://www.arxivbot.app/",
         technologies: [

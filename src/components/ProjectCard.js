@@ -1,15 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
-
-const techs = ["Next.js", "TailwindCSS", "LangChain", "JavaScript"];
+import { useTheme } from "next-themes";
 
 const ProjectCard = ({ project }) => {
+    // get theme info
+    const { theme } = useTheme();
+
     return (
         <div className="flex flex-col gap-6 rounded-xl border-0 border-gray-400 px-6 py-7 selection:bg-cyan-300 selection:text-cyan-900 dark:border-gray-500">
             {/* project image */}
             <Image
-                src={project.img ? project.img : "/projects/placeholder.png"}
+                src={
+                    theme === "dark" && project.imgDark
+                        ? project.imgDark
+                        : project.img
+                        ? project.img
+                        : "/projects/placeholder.png"
+                }
                 width={1024}
                 height={200}
                 className="-ml-1 rounded-md drop-shadow-md transition duration-150 hover:drop-shadow-xl dark:shadow-white"
@@ -31,8 +39,11 @@ const ProjectCard = ({ project }) => {
             </h2> */}
             <div className="mt-1 flex flex-wrap items-center gap-2">
                 {project.technologies &&
-                    project.technologies.map((tech) => (
-                        <div className="rounded-sm bg-gray-300 px-2 py-1 text-xs text-black dark:bg-gray-500 dark:text-white">
+                    project.technologies.map((tech, idx) => (
+                        <div
+                            key={idx}
+                            className="rounded-sm bg-gray-300 px-2 py-1 text-xs text-black dark:bg-gray-500 dark:text-white"
+                        >
                             <p className="italic">{tech}</p>
                         </div>
                     ))}
