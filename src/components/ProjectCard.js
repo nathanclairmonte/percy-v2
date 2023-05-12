@@ -54,7 +54,7 @@ const ProjectCard = ({ project }) => {
                 {project.gitLink && (
                     <Link
                         href={project.gitLink}
-                        className="text-md flex flex-row items-center gap-2 rounded bg-[#f08057] px-4 py-2 shadow-lg hover:opacity-80"
+                        className="text-md //shadow-sm flex flex-row items-center gap-2 rounded bg-[#f08057] px-4 py-2 hover:opacity-80"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -65,7 +65,7 @@ const ProjectCard = ({ project }) => {
                 {project.webLink && (
                     <Link
                         href={project.webLink}
-                        className="text-md flex flex-row items-center gap-2 rounded bg-[#f08057] px-4 py-2 shadow-lg hover:opacity-80"
+                        className="text-md //shadow-sm flex flex-row items-center gap-2 rounded bg-[#f08057] px-4 py-2 hover:opacity-80"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
