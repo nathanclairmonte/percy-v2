@@ -44,17 +44,18 @@ const Hero = () => {
                 <div className="mt-3 flex flex-row gap-2 pr-2">
                     <BsArrow90DegUp />
                     <div className="mt-1 flex flex-row gap-2 font-mono text-sm">
-                        A cool AI-generated image!
-                        {/* A cool AI-generated image created with{" "}
+                        Can you believe this is AI generated? Created with{" "}
                         <div className="group transition duration-300 hover:cursor-pointer">
                             <Link
-                                href="/"
+                                href="https://colab.research.google.com/drive/1olpMxNtubBaoM3U8IZNshljFFb-VKNhM#scrollTo=cnIIIQHHk1nl"
                                 className="font-semibold text-[#EE6F41] dark:text-[#f08057]"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 code I wrote!
                             </Link>
                             <span class="block h-0.5 max-w-0 bg-[#EE6F41] transition-all duration-500 group-hover:max-w-full dark:bg-[#f08057]"></span>
-                        </div> */}
+                        </div>
                         {/* put a link around the 'code I wrote' part, to the github for it */}
                     </div>
                 </div>
