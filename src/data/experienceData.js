@@ -5,7 +5,7 @@ export const experienceData = [
         title: "Machine Learning Researcher",
         duration: {
             start: "Aug 2020",
-            end: "Apr 2023",
+            end: "Jun 2023",
         },
         company: "McGill University",
         location: "Montréal, Quebec/Toronto, Ontario (Remote)",
