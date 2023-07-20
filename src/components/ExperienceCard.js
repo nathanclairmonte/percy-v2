@@ -37,8 +37,8 @@ const ExperienceCard = ({ experience }) => {
             {/* bullet points */}
             {experience.bullets && (
                 <ul className="ml-6 mt-5 list-disc space-y-1 text-lg text-gray-500 marker:text-[#f08057] dark:text-zinc-400">
-                    {experience.bullets.map((bullet) => (
-                        <li>{bullet}</li>
+                    {experience.bullets.map((bullet, idx) => (
+                        <li key={idx}>{bullet}</li>
                     ))}
                 </ul>
             )}

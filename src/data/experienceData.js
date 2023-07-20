@@ -2,7 +2,35 @@ const BULLET_BOLD_STYLES = "font-bold text-gray-600 dark:text-zinc-300";
 
 export const experienceData = [
     {
-        title: "Machine Learning Researcher",
+        title: "Part-Time AI/ML Consultant",
+        duration: {
+            start: "May 2023",
+            end: "Present",
+        },
+        company: "Lakestar",
+        location: "Toronto, Ontario (Remote)",
+        bullets: [
+            <p>
+                Serving as a key advisor in AI and ML for a senior associate at Lakestar, a
+                London-based VC firm.
+            </p>,
+            <p>
+                Leading tailored educational sessions on AI/ML-related topics from basic to advanced
+                level.
+            </p>,
+            <p>
+                Breaking down complex technological concepts, ultimately influencing decision-making
+                for multimillion-pound investments.
+            </p>,
+            <p>
+                Providing strategic guidance on emerging AI/ML technologies, fostering informed
+                adoption decisions.
+            </p>,
+            <p>Assisting in verifying and validating various technological strategies.</p>,
+        ],
+    },
+    {
+        title: "Machine Learning Researcher/M. Sc. Candidate",
         duration: {
             start: "Aug 2020",
             end: "Jun 2023",
@@ -11,44 +39,20 @@ export const experienceData = [
         location: "Montréal, Quebec/Toronto, Ontario (Remote)",
         bullets: [
             <p>
-                Designed vibrational cardiography (VCG) data collection system with respiratory and
-                cardiac reference signals, collecting{" "}
-                <span className={BULLET_BOLD_STYLES}>over 18,000 minutes</span> of signal data
-                across 6 collection channels.
+                Designed and implemented a data pipeline for VCG signal processing and analysis,
+                working with 18,000+ minutes of data.
             </p>,
             <p>
-                Implemented data pipeline to process, clean and extract{" "}
-                <span className={BULLET_BOLD_STYLES}>40,000+ VCG cardiac cycles</span> from raw
-                signal data.
+                Trained and optimized CNN models for respiratory volume and phase classification
+                with an average accuracy of 91.5%.
             </p>,
             <p>
-                Trained state-of-the-art CNN models which{" "}
-                <span className={BULLET_BOLD_STYLES}>
-                    showed 91.5% average accuracy on respiratory volume and phase classification
-                </span>
-                .
+                Introduced machine learning techniques and transfer learning to BP prediction
+                research, enhancing prediction accuracy by 35%.
             </p>,
             <p>
-                Researched, in a team of 5, various methods to predict blood pressure (BP)
-                information from VCG signals.
-            </p>,
-            <p>
-                Introduced machine learning techniques to the project,{" "}
-                <span className={BULLET_BOLD_STYLES}>improving prediction accuracy by 20%</span>.
-            </p>,
-            <p>
-                Implemented transfer learning to emulate real-world application, leading to a{" "}
-                <span className={BULLET_BOLD_STYLES}>
-                    further 15% improvement in prediction accuracy
-                </span>
-                .
-            </p>,
-            <p>
-                Resulted in{" "}
-                <span className={BULLET_BOLD_STYLES}>multiple published academic studies</span>, a{" "}
-                <span className={BULLET_BOLD_STYLES}>thesis</span> and an{" "}
-                <span className={BULLET_BOLD_STYLES}>approved BP prediction patent</span> for our
-                industry partner.
+                Contributed to numerous published academic studies and an approved BP prediction
+                patent for our industry partner.
             </p>,
         ],
     },
@@ -62,27 +66,16 @@ export const experienceData = [
         location: "Montréal, Quebec",
         bullets: [
             <p>
-                Early team member at Stocate, a startup platform designed to help users shop locally
-                and sustainably. Left to pursue my MSc.
+                Built, with 2 other founders, the entire product (app, website and database) using
+                React, .NET, and GCP. App gained 60+ users.
             </p>,
             <p>
-                Built Stocate's entire stack from the ground up, including{" "}
-                <span className={BULLET_BOLD_STYLES}>
-                    React-Native mobile application, React website, .NET API and Postgres database
-                </span>
-                . App had garnered <span className={BULLET_BOLD_STYLES}>60+ users</span> at the time
-                of my leaving.
+                Led successful database migration from SQL Server to PostgreSQL, resulting in
+                significant cost savings.
             </p>,
             <p>
-                Migrated entire database from SQL Server to PostgreSQL,{" "}
-                <span className={BULLET_BOLD_STYLES}>
-                    saving the company $1,928 in yearly database fees
-                </span>
-                .
-            </p>,
-            <p>
-                Implemented a feedback process for the website and mobile application{" "}
-                <span className={BULLET_BOLD_STYLES}>which received 100+ responses</span>.
+                Implemented a feedback process for user engagement, receiving 100+ responses and
+                leading to over 10 major product changes.
             </p>,
             <p>
                 Managed incoming software interns by leading stand-ups and delegating coding tasks.
