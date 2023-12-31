@@ -9,7 +9,7 @@ const CountdownFooter = (props) => {
     return (
         <footer
             className={clsx(
-                "mx-auto max-w-6xl p-1 selection:bg-cyan-300 selection:text-cyan-900",
+                "mx-auto p-1 selection:bg-cyan-300 selection:text-cyan-900",
                 props.className
             )}
         >
