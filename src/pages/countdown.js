@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { fireworksOptions } from "@/data/fireworksOptions";
+import { DotGothic16, Chakra_Petch, Silkscreen, Roboto_Mono } from "next/font/google";
 
 import { NoNavbarLayout } from "@/components/list";
 import { Fireworks } from "@fireworks-js/react";
 import "@/styles/Countdown.module.css";
+
+const gothic = DotGothic16({ weight: ["400"], subsets: ["latin"] });
+const chakra = Chakra_Petch({ weight: ["400"], subsets: ["latin"] });
+const silk = Silkscreen({ weight: ["400"], subsets: ["latin"] });
+const share = Roboto_Mono({ weight: ["400"], subsets: ["latin"] });
 
 const Countdown = () => {
     const newYearDate = "2024-01-01T00:00:00";
@@ -84,17 +90,17 @@ const Countdown = () => {
             return <div className="text-3xl text-green-400">Happy New Year! 🎉🎊</div>;
         }
 
-        let styleClass = "text-2xl text-gray-100";
-        if (timeLeft.hours === 0 && timeLeft.minutes < 1) {
-            styleClass = "text-3xl text-gray-100";
-        } else if (timeLeft.minutes === 0 && timeLeft.seconds <= 59) {
-            styleClass = "text-4xl text-gray-100 animate-pulse";
+        let styleClass = "text-xl sm:text-3xl md:text-5xl text-gray-50";
+        if (timeLeft.hours === 0 && timeLeft.minutes > 0) {
+            styleClass = "text-3xl sm:text-5xl md:text-6xl text-gray-50";
+        } else if (timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds > 0) {
+            styleClass = "text-[10rem] text-gray-50";
         }
 
         const pluralize = (count, singular) => (count === 1 ? singular : `${singular}s`);
 
         return (
-            <div className={`countdown ${styleClass}`}>
+            <div className={`countdown ${styleClass} ${gothic.className}`}>
                 {timeLeft.hours > 0 && (
                     <span>
                         {timeLeft.hours} {pluralize(timeLeft.hours, "hour")}{" "}
@@ -105,8 +111,10 @@ const Countdown = () => {
                         {timeLeft.minutes} {pluralize(timeLeft.minutes, "minute")}{" "}
                     </span>
                 )}
-                {timeLeft.seconds > 0 && timeLeft.minutes === 0 && <span>{timeLeft.seconds}</span>}
-                {timeLeft.seconds > 0 && timeLeft.minutes > 0 && (
+                {timeLeft.seconds > 0 && timeLeft.minutes === 0 && timeLeft.hours === 0 && (
+                    <span>{timeLeft.seconds}</span>
+                )}
+                {timeLeft.seconds > 0 && timeLeft.minutes > 0 && timeLeft.hours > 0 && (
                     <span>
                         {timeLeft.seconds} {pluralize(timeLeft.seconds, "second")}
                     </span>
@@ -117,8 +125,8 @@ const Countdown = () => {
 
     return (
         <NoNavbarLayout title="NYE Countdown!">
-            {isCelebration && <Fireworks options={fireworksOptions} style={fireworksStyles} />}
-            <div className="absolute z-[9999] flex h-full flex-col items-center justify-center">
+            {/* {isCelebration && <Fireworks options={fireworksOptions} style={fireworksStyles} />} */}
+            <div className="absolute z-[9999] flex h-full w-full flex-col items-center justify-center">
                 {renderCountdown()}
                 <div>
                     <input
