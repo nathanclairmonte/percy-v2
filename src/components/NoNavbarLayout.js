@@ -2,7 +2,12 @@
 
 import Head from "next/head";
 import { useRouter } from "next/router";
+// import { DotGothic16 } from "next/font/google";
+
 import { CountdownFooter } from "@/components/list";
+// import clsx from "clsx";
+
+// const font = DotGothic16({ weight: ["400"], subsets: ["latin"] });
 
 const NoNavbarLayout = ({ children, ...customMeta }) => {
     const router = useRouter();
@@ -38,7 +43,10 @@ const NoNavbarLayout = ({ children, ...customMeta }) => {
                 <meta name="twitter:image" content={meta.image} />
                 {meta.date && <meta property="article:published_time" content={meta.date} />}
             </Head>
-            <main className="flex h-screen w-full flex-col justify-between bg-black pt-20">
+            <main
+                className="flex h-screen w-full flex-col justify-between bg-black"
+                suppressHydrationWarning
+            >
                 <div className="h-full">{children}</div>
                 <CountdownFooter className="w-full self-end" />
             </main>
