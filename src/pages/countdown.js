@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { fireworksOptions } from "@/data/fireworksOptions";
+
 import { NoNavbarLayout } from "@/components/list";
+import { Fireworks } from "@fireworks-js/react";
 import "@/styles/Countdown.module.css";
 
 const Countdown = () => {
@@ -24,6 +27,15 @@ const Countdown = () => {
     const [customHours, setCustomHours] = useState(0);
     const [customMinutes, setCustomMinutes] = useState(0);
     const [customSeconds, setCustomSeconds] = useState(0);
+
+    const fireworksStyles = {
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+        position: "fixed",
+        // background: "#000"
+    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -105,45 +117,56 @@ const Countdown = () => {
 
     return (
         <NoNavbarLayout title="NYE Countdown!">
-            <div className="flex h-full flex-col items-center justify-center">
-                <header className="text-xl">
-                    {renderCountdown()}
-                    <div>
-                        <input
-                            type="number"
-                            className="mr-2 mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
-                            placeholder="Hours"
-                            value={customHours}
-                            onChange={(e) => setCustomHours(e.target.value)}
-                        />
-                        <input
-                            type="number"
-                            className="mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
-                            placeholder="Minutes"
-                            value={customMinutes}
-                            onChange={(e) => setCustomMinutes(e.target.value)}
-                        />
-                        <input
-                            type="number"
-                            className="ml-2 mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
-                            placeholder="Seconds"
-                            value={customSeconds}
-                            onChange={(e) => setCustomSeconds(e.target.value)}
-                        />
-                        <button
-                            className="ml-4 mt-4 rounded bg-blue-500 px-4 py-2 text-white"
-                            onClick={handleCustomTimeChange}
-                        >
-                            Start Custom Countdown
-                        </button>
-                    </div>
+            {isCelebration && <Fireworks options={fireworksOptions} style={fireworksStyles} />}
+            <div className="absolute z-[9999] flex h-full flex-col items-center justify-center">
+                {renderCountdown()}
+                <div>
+                    <input
+                        type="number"
+                        className="mr-2 mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
+                        placeholder="Hours"
+                        value={customHours}
+                        onChange={(e) => setCustomHours(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        className="mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
+                        placeholder="Minutes"
+                        value={customMinutes}
+                        onChange={(e) => setCustomMinutes(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        className="ml-2 mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
+                        placeholder="Seconds"
+                        value={customSeconds}
+                        onChange={(e) => setCustomSeconds(e.target.value)}
+                    />
                     <button
-                        className="mt-4 rounded bg-green-500 px-4 py-2 text-white"
-                        onClick={resetToLiveCountdown}
+                        className="ml-4 mt-4 rounded bg-blue-500 px-4 py-2 text-xl text-white"
+                        onClick={handleCustomTimeChange}
                     >
-                        Reset to Live Countdown
+                        Start Custom Countdown
                     </button>
-                </header>
+                </div>
+                <button
+                    className="mt-4 rounded bg-green-500 px-4 py-2 text-xl text-white"
+                    onClick={resetToLiveCountdown}
+                >
+                    Reset to Live Countdown
+                </button>
+                <button
+                    className="mt-4 rounded bg-green-500 px-4 py-2 text-xl text-white"
+                    onClick={() => setIsCelebration(true)}
+                >
+                    Start Fireworks
+                </button>
+                <button
+                    className="mt-4 rounded bg-red-500 px-4 py-2 text-xl text-white"
+                    onClick={() => setIsCelebration(false)}
+                >
+                    Stop Fireworks
+                </button>
             </div>
         </NoNavbarLayout>
     );
