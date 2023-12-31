@@ -13,3 +13,4 @@ export { default as PageTitle } from "./PageTitle";
 export { default as ExperienceList } from "./ExperienceList";
 export { default as ExperienceCard } from "./ExperienceCard";
 export { default as NoNavbarLayout } from "./NoNavbarLayout";
+export { default as CountdownFooter } from "./CountdownFooter";

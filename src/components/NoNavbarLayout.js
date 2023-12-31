@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Footer } from "@/components/list";
+import { CountdownFooter } from "@/components/list";
 
 const NoNavbarLayout = ({ children, ...customMeta }) => {
     const router = useRouter();
@@ -38,9 +38,9 @@ const NoNavbarLayout = ({ children, ...customMeta }) => {
                 <meta name="twitter:image" content={meta.image} />
                 {meta.date && <meta property="article:published_time" content={meta.date} />}
             </Head>
-            <main className="flex h-screen w-full flex-col justify-between border border-black bg-[#fffbf5] pt-20 dark:bg-gray-800">
+            <main className="flex h-screen w-full flex-col justify-between bg-black pt-20">
                 <div className="h-full">{children}</div>
-                <Footer className="w-full self-end" />
+                <CountdownFooter className="w-full self-end" />
             </main>
         </div>
     );
