@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { fireworksOptions } from "@/data/fireworksOptions";
-import { DotGothic16, Chakra_Petch, Silkscreen, Roboto_Mono } from "next/font/google";
+import { DotGothic16, Roboto } from "next/font/google";
 
 import { NoNavbarLayout } from "@/components/list";
 import { Fireworks } from "@fireworks-js/react";
 import "@/styles/Countdown.module.css";
+import clsx from "clsx";
 
 const gothic = DotGothic16({ weight: ["400"], subsets: ["latin"] });
-const chakra = Chakra_Petch({ weight: ["400"], subsets: ["latin"] });
-const silk = Silkscreen({ weight: ["400"], subsets: ["latin"] });
-const share = Roboto_Mono({ weight: ["400"], subsets: ["latin"] });
+const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
 const Countdown = () => {
-    const newYearDate = "2024-01-01T00:00:00";
+    // const newYearDate = "2024-01-01T00:00:00";
+    const newYearDate = "2023-12-31T17:13:00";
     const calculateTimeLeft = (targetDate) => {
         const difference = +new Date(targetDate) - +new Date();
         let timeLeft = {};
@@ -87,14 +87,23 @@ const Countdown = () => {
 
     const renderCountdown = () => {
         if (isCelebration) {
-            return <div className="text-3xl text-green-400">Happy New Year! 🎉🎊</div>;
+            return (
+                <div
+                    className={clsx(
+                        "animate-bounce text-3xl text-green-400 sm:text-5xl md:text-6xl lg:text-7xl",
+                        roboto.className
+                    )}
+                >
+                    Happy New Year!!! 🎉🎊
+                </div>
+            );
         }
 
         let styleClass = "text-xl sm:text-3xl md:text-5xl text-gray-50";
         if (timeLeft.hours === 0 && timeLeft.minutes > 0) {
             styleClass = "text-3xl sm:text-5xl md:text-6xl text-gray-50";
         } else if (timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds > 0) {
-            styleClass = "text-[10rem] text-gray-50";
+            styleClass = "text-[12rem] sm:text-[14rem] md:text-[17rem] text-gray-50";
         }
 
         const pluralize = (count, singular) => (count === 1 ? singular : `${singular}s`);
@@ -111,12 +120,15 @@ const Countdown = () => {
                         {timeLeft.minutes} {pluralize(timeLeft.minutes, "minute")}{" "}
                     </span>
                 )}
-                {timeLeft.seconds > 0 && timeLeft.minutes === 0 && timeLeft.hours === 0 && (
-                    <span>{timeLeft.seconds}</span>
-                )}
-                {timeLeft.seconds > 0 && timeLeft.minutes > 0 && timeLeft.hours > 0 && (
+                {timeLeft.seconds > 0 && (
                     <span>
-                        {timeLeft.seconds} {pluralize(timeLeft.seconds, "second")}
+                        {timeLeft.hours === 0 && timeLeft.minutes === 0 ? (
+                            <>{timeLeft.seconds}</>
+                        ) : (
+                            <>
+                                {timeLeft.seconds} {pluralize(timeLeft.seconds, "second")}
+                            </>
+                        )}
                     </span>
                 )}
             </div>
@@ -125,10 +137,10 @@ const Countdown = () => {
 
     return (
         <NoNavbarLayout title="NYE Countdown!">
-            {/* {isCelebration && <Fireworks options={fireworksOptions} style={fireworksStyles} />} */}
-            <div className="absolute z-[9999] flex h-full w-full flex-col items-center justify-center">
+            {isCelebration && <Fireworks options={fireworksOptions} style={fireworksStyles} />}
+            <div className="absolute z-[50] flex h-full w-full flex-col items-center justify-center">
                 {renderCountdown()}
-                <div>
+                {/* <div>
                     <input
                         type="number"
                         className="mr-2 mt-4 w-20 rounded border border-gray-600 bg-gray-700 p-2 text-white"
@@ -174,7 +186,7 @@ const Countdown = () => {
                     onClick={() => setIsCelebration(false)}
                 >
                     Stop Fireworks
-                </button>
+                </button> */}
             </div>
         </NoNavbarLayout>
     );
